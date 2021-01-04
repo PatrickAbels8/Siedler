@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Siedler</string>
+
+    <!-- navigation -->
+    <string name="title_about">Über</string>
+    <string name="title_new">Neu</string>
+    <string name="title_history">Geschichte</string>
+
+    <!-- dialog -->
+    <string name="dialog_header_new">Neues Spiel</string>
+    <string name="dialog_header_end">Spiel Beenden</string>
+    <string name="dialog_header_game">01.01.2021</string>
+    <string name="dialog_action_ok">ok</string>
+    <string name="dialog_action_cancel">zurück</string>
+    <string name="dialog_content_new">Bist du sicher?</string>
+
+    <!-- intent -->
+    <string name="intent_position">position</string>
+    <string name="intent_numbers">numbers</string>
+    <string name="intent_players">players</string>
+    <string name="intent_date">date</string>
+    <string name="intent_id">id</string>
+    <string name="intent_game">game</string>
+
+    <!-- helpers -->
+    <string name="delimiter_players">#</string>
+    <string name="delimiter_numbers">%</string>
+    <string name="delimiter_date">/</string>
+
+    <!-- errors -->
+    <string name="error_dbError">Prüfe die SQL-Verbindung!</string>
+    <string name="error_wrongInput">Prüfe deine Eingaben!</string>
+</resources>
