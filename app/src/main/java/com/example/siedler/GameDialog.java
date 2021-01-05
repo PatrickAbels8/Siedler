@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 public class GameDialog extends DialogFragment {
-    private Button action_ok;
+    private Button action_cancel;
     private TextView header;
     private TextView game;
 
@@ -28,10 +28,10 @@ public class GameDialog extends DialogFragment {
         View v = inflater.inflate(R.layout.dialog_game, container, false);
 
         header = v.findViewById(R.id.header);
-        action_ok = v.findViewById(R.id.ok);
+        action_cancel = v.findViewById(R.id.cancel);
         game = v.findViewById(R.id.game);
 
-        Bundle args = new Bundle();
+        Bundle args = getArguments();
         numbers = args.getString(getString(R.string.intent_numbers));
         players = args.getString(getString(R.string.intent_players));
         date = args.getString(getString(R.string.intent_date));
@@ -43,7 +43,7 @@ public class GameDialog extends DialogFragment {
         game.setText(o);
         header.setText(date);
 
-        action_ok.setOnClickListener(new View.OnClickListener() {
+        action_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getDialog().dismiss();

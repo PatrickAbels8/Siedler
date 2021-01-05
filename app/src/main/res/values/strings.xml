@@ -13,6 +13,8 @@
     <string name="dialog_action_ok">ok</string>
     <string name="dialog_action_cancel">zurück</string>
     <string name="dialog_content_new">Bist du sicher?</string>
+    <string name="dialog_content_player">Spieler</string>
+    <string name="dialog_content_points">Punkte</string>
 
     <!-- intent -->
     <string name="intent_position">position</string>
@@ -22,12 +24,30 @@
     <string name="intent_id">id</string>
     <string name="intent_game">game</string>
 
+    <!-- pref keys -->
+    <string name="prefs_numbers">numbers</string>
+    <string name="prefs_ingame">ingame</string>
+    <string name="prefs_date">date</string>
+
     <!-- helpers -->
     <string name="delimiter_players">#</string>
-    <string name="delimiter_numbers">%</string>
+    <string name="delimiter_numbers">,</string>
     <string name="delimiter_date">/</string>
+    <string name="appendix_sum">Züge</string>
+    <string name="information">
+        Beginne ein neues Spiel durch Drücken des Plus-Buttons link unten.\n\n
+        Schaue dir bisherige Spiele in der Historie an.\n\n
+        Für Probleme oder Verbesserungsvorschläge schaue bei Über.
+    </string>
 
     <!-- errors -->
     <string name="error_dbError">Prüfe die SQL-Verbindung!</string>
     <string name="error_wrongInput">Prüfe deine Eingaben!</string>
+
+    <!-- about -->
+    <string name="about">
+        Patrick Abels\n
+        Mail: patrick.abels@e-mail.de\n
+        Mobil: 015204371014
+    </string>
 </resources>

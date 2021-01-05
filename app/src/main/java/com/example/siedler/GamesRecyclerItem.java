@@ -2,7 +2,7 @@ package com.example.siedler;
 
 public class GamesRecyclerItem {
     private Integer id;
-    private String numbers; // 1%2%1%2%1%2%1%2%1
+    private String numbers; // 1,2,12,...
     private String players; // patrick#1#bianca#2
     private String date; // 2021/03/13/18/30
 

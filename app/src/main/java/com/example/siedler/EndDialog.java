@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,15 +18,14 @@ import androidx.fragment.app.DialogFragment;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class EndDialog extends DialogFragment {
-    private TextInputLayout player1, player2, player3, player4, player5, player6, player7, player8;
-    private TextInputLayout points1, points2, points3, points4, points5, points6, points7, points8;
+    private EditText player1, player2, player3, player4, player5, player6, player7, player8;
+    private EditText points1, points2, points3, points4, points5, points6, points7, points8;
     private Button action_ok;
     private Button action_cancel;
 
     private String delimiter;
 
     public interface OnInputSelected{
-        // patrick#3#till#10#bianca#8
         void sendEnd(String players);
     }
     public OnInputSelected onInputSelected;
@@ -66,24 +66,25 @@ public class EndDialog extends DialogFragment {
         action_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String _player1 = player1.getEditText().getText().toString();
-                String _player2 = player2.getEditText().getText().toString();
-                String _player3 = player3.getEditText().getText().toString();
-                String _player4 = player4.getEditText().getText().toString();
-                String _player5 = player5.getEditText().getText().toString();
-                String _player6 = player6.getEditText().getText().toString();
-                String _player7 = player7.getEditText().getText().toString();
-                String _player8 = player8.getEditText().getText().toString();
-                String _points1 = points1.getEditText().getText().toString();
-                String _points2 = points2.getEditText().getText().toString();
-                String _points3 = points3.getEditText().getText().toString();
-                String _points4 = points4.getEditText().getText().toString();
-                String _points5 = points5.getEditText().getText().toString();
-                String _points6 = points6.getEditText().getText().toString();
-                String _points7 = points7.getEditText().getText().toString();
-                String _points8 = points8.getEditText().getText().toString();
+                String _player1 = player1.getText().toString();
+                String _player2 = player2.getText().toString();
+                String _player3 = player3.getText().toString();
+                String _player4 = player4.getText().toString();
+                String _player5 = player5.getText().toString();
+                String _player6 = player6.getText().toString();
+                String _player7 = player7.getText().toString();
+                String _player8 = player8.getText().toString();
+                String _points1 = points1.getText().toString();
+                String _points2 = points2.getText().toString();
+                String _points3 = points3.getText().toString();
+                String _points4 = points4.getText().toString();
+                String _points5 = points5.getText().toString();
+                String _points6 = points6.getText().toString();
+                String _points7 = points7.getText().toString();
+                String _points8 = points8.getText().toString();
 
-                if((_player1.isEmpty() && !_points1.isEmpty()) || (!_player1.isEmpty() && _points1.isEmpty()) ||
+                if(_player1.isEmpty() ||_points1.isEmpty() ||
+                        (_player1.isEmpty() && !_points1.isEmpty()) || (!_player1.isEmpty() && _points1.isEmpty()) ||
                         (_player2.isEmpty() && !_points2.isEmpty()) || (!_player2.isEmpty() && _points2.isEmpty()) ||
                         (_player3.isEmpty() && !_points3.isEmpty()) || (!_player3.isEmpty() && _points3.isEmpty()) ||
                         (_player4.isEmpty() && !_points4.isEmpty()) || (!_player4.isEmpty() && _points4.isEmpty()) ||

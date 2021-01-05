@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Canvas;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +25,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class HistoryFragment extends Fragment {
     private Context context;
@@ -107,7 +106,9 @@ public class HistoryFragment extends Fragment {
             String numbers = games.getString(1);
             String players = games.getString(2);
             String date = games.getString(3);
-            itemList.add(new GamesRecyclerItem(id, numbers, players, date));
+
+            GamesRecyclerItem item = new GamesRecyclerItem(id, numbers, players, date);
+            itemList.add(item);
         }
         adapter.notifyDataSetChanged();
         sort();

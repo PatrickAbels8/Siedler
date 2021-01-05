@@ -1,6 +1,7 @@
 package com.example.siedler;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ public class GamesRecyclerAdapter extends RecyclerView.Adapter<GamesRecyclerAdap
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position){
-        holder.itemId.setText(gamesRecyclerItemList.get(position).getId());
+        holder.itemId.setText(Integer.toString(gamesRecyclerItemList.get(position).getId()));
         holder.itemWinner.setText(getWinner(gamesRecyclerItemList.get(position).getPlayers()));
         holder.itemDate.setText(getDate(gamesRecyclerItemList.get(position).getDate()));
     }
